@@ -1,0 +1,26 @@
+/* styles.css */
+
+/* Make page fill and center sketches */
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background: #111;                  
+  color: #eee;                        
+}
+
+/* Give each sketch consistent frame and spacing */
+canvas {
+  border: 2px solid #444;
+  box-shadow: 0 0 10px rgba(0,0,0,0.7);
+  margin: 0.5rem;
+  background: transparent;           
+}
+
+
+
