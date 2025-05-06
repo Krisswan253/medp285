@@ -1,0 +1,107 @@
+
+
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: url('images/stars.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.orbits {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* orbit path */
+.orbits::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  height: 600px;
+  transform: translate(-50%, -50%);
+  border: 2px solid rgba(255,255,255,0.5);
+  border-radius: 50%;
+  pointer-events: none;
+}
+/* centered path*/
+
+.orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  height: 600px;
+  transform-origin: center center;
+  pointer-events: none;
+}
+
+/*  orbit durations (same speed) */
+.orbit.neptune {
+  animation: spinNeptune 120s linear infinite;
+}
+.orbit.saturn {
+  animation: spinSaturn 120s linear infinite;
+}
+.orbit.venus {
+  animation: spinVenus 120s linear infinite;
+}
+
+/* planet images (within links) */
+.planet {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 0.2s ease;
+  cursor: pointer;
+  transform-origin: center center;
+  pointer-events: auto;
+  z-index: 2;
+}
+
+/* pause orbit and scale on hover */
+.orbit:hover {
+  animation-play-state: paused;
+}
+.orbit:hover .planet,
+.planet:hover {
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+/* spin keyframes with offsets */
+@keyframes spinNeptune {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to   { transform: translate(-50%, -50%) rotate(360deg); }
+}
+@keyframes spinSaturn {
+  from { transform: translate(-50%, -50%) rotate(120deg); }
+  to   { transform: translate(-50%, -50%) rotate(480deg); }
+}
+@keyframes spinVenus {
+  from { transform: translate(-50%, -50%) rotate(240deg); }
+  to   { transform: translate(-50%, -50%) rotate(600deg); }
+}
+
+/* title styling */
+.title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Genos', sans-serif;
+  font-size: 3rem;
+  color: #fff;
+  text-align: center;
+  pointer-events: none;
+  z-index: 1;
+}
+
+  

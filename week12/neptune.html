@@ -1,0 +1,58 @@
+<!-- week12/neptune.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Neptune</title>
+  <!-- External CSS -->
+  <link rel="stylesheet" href="neptune.css">
+  <!-- Google Fonts Lexend Deca & Genos -->
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;700&family=Genos:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="venus.html">Venus</a>
+    <a href="saturn.html">Saturn</a>
+  </nav>
+  <header><h1>Neptune</h1></header>
+  <div class="container">
+    <aside class="moons">
+      <h2>Moons</h2>
+      <ul>
+        <li>Triton - diameter 2706 km, primarily water ice with a rocky core.</li>
+        <li>Proteus - diameter 418 km, dark irregular body of ice and rock.</li>
+        <li>Nereid - diameter 340 km, icy rock remnant of a captured object.</li>
+        <li>Larissa - diameter 194 km, composed of ice and rocky material.</li>
+      </ul>
+    </aside>
+    <div class="image">
+      <img src="images/neptune.png" alt="Neptune">
+    </div>
+    <aside class="moons-right">
+      <h2>More Moons</h2>
+      <ul>
+        <li>Galatea - diameter 158 km, dense water ice.</li>
+        <li>Despina - diameter 148 km, rubble-pile of ice and rock.</li>
+        <li>Thalassa - diameter 80 km, small icy rock.</li>
+        <li>Naiad - diameter 70 km, irregular icy body.</li>
+      </ul>
+    </aside>
+    <div class="distance-bar">
+      <div><strong>Earth</strong><br>2.70 billion mi</div>
+      <div><strong>Venus</strong><br>2.73 billion mi</div>
+      <div><strong>Saturn</strong><br>1.91 billion mi</div>
+    </div>
+    <button id="infoBtn">More Info</button>
+    <div class="info">
+      <p>Neptune is a gas giant composed primarily of hydrogen and helium with traces of methane that give it its intense blue hue.</p>
+    </div>
+  </div>
+  <footer>© Kris Swanson MEDP235 Final Rough Draft</footer>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $('#infoBtn').click(() => $('.info').slideToggle());
+  </script>
+</body>
+</html>

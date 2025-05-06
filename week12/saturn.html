@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Saturn</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Genos:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="saturn.css">
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="venus.html">Venus</a>
+    <a href="neptune.html">Neptune</a>
+  </nav>
+
+  <header><h1>Saturn</h1></header>
+
+  <div class="container">
+    <aside class="moons">
+      <h2>Moons</h2>
+      <ul>
+        <li>Titan - 5150 km, nitrogen-rich atmosphere</li>
+        <li>Rhea - 1528 km, icy rock</li>
+        <li>Iapetus - 1469 km, half-bright half-dark surface</li>
+        <li>Dione - 1123 km, water-ice shell</li>
+      </ul>
+    </aside>
+
+    <div class="image">
+      <img src="images/saturn.png" alt="Saturn">
+    </div>
+
+    <aside class="moons-right">
+      <h2>More Moons</h2>
+      <ul>
+        <li>Tethys - 1060 km, icy body</li>
+        <li>Enceladus - 504 km, geysering ice</li>
+        <li>Mimas - 396 km, cratered ice ball</li>
+        <li>Hyperion - 270 km, sponge-like rock</li>
+      </ul>
+    </aside>
+
+    <div class="distance-bar">
+      <div><strong>Earth</strong><br>746 million mi</div>
+      <div><strong>Venus</strong><br>918 million mi</div>
+      <div><strong>Neptune</strong><br>1.60 billion mi</div>
+    </div>
+
+    <button id="infoBtn">More Info</button>
+    <div class="info">
+      <p>Neptune is a gas giant composed primarily of hydrogen and helium with traces of methane that give it its intense blue hue.</p>
+    </div>
+  </div>
+  <footer>© Kris Swanson MEDP235 Final Rough Draft</footer>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $('#infoBtn').click(() => $('.info').slideToggle());
+  </script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+/* venus.css */
+/* Import Raleway for body and Genos for nav/footer */
+
+body {
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  background: #7a989a;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+nav {
+  font-family: 'Genos', sans-serif;
+  background: #849271;
+  text-align: center;
+  padding: .75rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: 700;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+header {
+  text-align: center;
+  padding: 1rem;
+}
+
+footer {
+  font-family: 'Genos', sans-serif;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Three-column layout */
+.container {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: auto auto auto;
+  align-items: start;
+  justify-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* Moons card styling */
+.moons, .moons-right {
+  display: grid;
+  gap: .75rem;
+  background: #c1ae8d;
+  padding: 1rem;
+  border-radius: 6px;
+  width: 100%;
+}
+
+.moons h2, .moons-right h2 {
+  text-align: center;
+  margin-bottom: .5rem;
+}
+
+.moons li, .moons-right li {
+  background: #f7f3e991;
+  padding: .5rem;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: 500;
+  list-style: none;
+}
+
+/* Venus image larger */
+.image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+}
+
+/* Distance bar spans full grid */
+.distance-bar {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-around;
+  background: #445566;
+  padding: 1rem;
+  border-radius: 4px;
+  width: 100%;
+}
+
+distance-bar div {
+  color: #fff;
+  text-align: center;
+}
+
+/* Centered toggle button */
+#infoBtn {
+  grid-column: 2;
+  justify-self: center;
+  padding: .75rem 1.5rem;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #c1ae8d, #c67052);
+  color: #333;
+  font-weight: 700;
+  box-shadow: 0 4px 6px rgba(0,0,0,.1);
+  cursor: pointer;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+#infoBtn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 8px rgba(0,0,0,.15);
+}
+
+/* Hidden info panel spans full grid */
+.info {
+  grid-column: 2;
+  display: none;
+  max-width: 600px;
+  text-align: center;
+}
+
+  
