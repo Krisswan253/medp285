@@ -1,0 +1,151 @@
+/* neptune.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lexend Deca', sans-serif;
+  background-image: url('images/stars.jpg');
+  background-repeat: repeat;
+  background-position: 0 0;      
+  background-attachment: fixed;
+  cursor: url('images/cursor.cur'), auto;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  animation: driftStars 750s linear infinite;
+}
+
+@keyframes driftStars {
+  from { background-position: 0  0; }
+  to   { background-position: -5000px -5000px; }
+}
+
+nav {
+  font-family: 'Genos', sans-serif;
+  text-align: center;
+  padding: .75rem;
+  min-height: 70px;
+}
+nav a {
+  color: #fff;
+  margin: 0 20px;
+  display: inline-block;
+  height: 100px;
+}
+.nav-icon {
+  filter: drop-shadow(0.35rem 0.35rem 0.4rem rgb(255, 159, 80));
+  width: 40px;
+  object-fit: contain;
+  transform-origin: center center;  
+  transition: transform 0.2s ease;  
+  }
+  .nav-icon:hover {
+    transform: scale(1.25); 
+  }
+  .nav-icon2{
+    filter: drop-shadow(0.35rem 0.35rem 0.4rem rgb(255, 159, 80));
+    width: 90px;
+    margin-left: -15px;
+  }
+  .nav-icon2:hover {
+    transform: scale(1.25); 
+  }
+
+header, footer {
+  text-align: center;
+  padding: 1rem;
+}
+
+.container {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: auto auto auto;
+  align-items: start;
+  justify-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.moons, .moons-right {
+  background: #325e7261;
+  padding: 1rem;
+  border-radius: 4px;
+  width: 100%;
+}
+.moons h2, .moons-right h2 {
+  text-align: center;
+  margin-top: 0;
+}
+.moons ul, .moons-right ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.moons li, .moons-right li {
+  background: #20202a5d;
+  margin: 0.5rem 0;
+}
+
+.image img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+}
+
+.distance-bar {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-around;
+  background: #445566;
+  padding: 1rem;
+  border-radius: 4px;
+  width: 100%;
+}
+.distance-bar div {
+  text-align: center;
+}
+
+#teleport-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: url('images/neptune.png') no-repeat center center;
+  background-size: contain;
+  pointer-events: none;
+  opacity: 0;
+  transform: scale(0.2);
+  transition: transform 0.8s ease-in, opacity 0.8s ease-in;
+  z-index: 9999;
+}
+#teleport-overlay.active {
+  opacity: 1;
+  transform: scale(3);
+}
+
+#infoBtn {
+  grid-column: 2;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #FFF380);
+  color: #333;
+  font-weight: 700;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+#infoBtn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.info {
+  grid-column: 2;
+  display: none;
+  max-width: 600px;
+  text-align: center;
+}
+
+  

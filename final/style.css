@@ -1,0 +1,117 @@
+
+body {
+  font-family: 'Genos', sans-serif;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-image: url('images/stars.jpg');
+  background-repeat: repeat;
+  background-position: 0 0;      
+  background-attachment: fixed;
+  cursor: url('images/cursor.cur'), auto;
+  animation: driftStars 750s linear infinite;
+}
+
+@keyframes driftStars {
+  from { background-position: 0  0; }
+  to   { background-position: -5000px -5000px; }
+
+}
+
+.orbits {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.orbits::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  height: 600px;
+  transform: translate(-50%, -50%);
+  border: 2px solid rgba(255,255,255,0.5);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  height: 600px;
+  transform-origin: center center;
+  pointer-events: none;
+}
+
+.orbit.neptune {
+  animation: spinNeptune 120s linear infinite;
+}
+.orbit.saturn {
+  animation: spinSaturn 120s linear infinite;
+}
+.orbit.venus {
+  animation: spinVenus 120s linear infinite;
+}
+.orbit.game {
+  animation: spinGame 120s linear infinite;
+}
+
+.planet {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 0.2s ease;
+  cursor: pointer;
+  transform-origin: center center;
+  pointer-events: auto;
+  z-index: 2;
+}
+
+.orbit:hover {
+  animation-play-state: paused;
+}
+.orbit:hover .planet,
+.planet:hover {
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+@keyframes spinNeptune {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to   { transform: translate(-50%, -50%) rotate(360deg); }
+}
+@keyframes spinSaturn {
+  from { transform: translate(-50%, -50%) rotate(90deg); }
+  to   { transform: translate(-50%, -50%) rotate(450deg); }
+}
+@keyframes spinVenus {
+  from { transform: translate(-50%, -50%) rotate(180deg); }
+  to   { transform: translate(-50%, -50%) rotate(540deg); }
+}
+@keyframes spinGame {
+  from { transform: translate(-50%, -50%) rotate(270deg);}
+  to   { transform: translate(-50%, -50%) rotate(630deg);}
+}
+
+.title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Genos', sans-serif;
+  font-size: 3rem;
+  color: #fff;
+  text-align: center;
+  pointer-events: none;
+  z-index: 1;
+}
+
+  

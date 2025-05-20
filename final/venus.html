@@ -1,0 +1,72 @@
+<!-- week12/venus.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Venus</title>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Genos:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="venus.css">
+</head>
+<body>
+  <nav>
+    <a href="index.html">
+      <img src="images/earth.png" alt="earth" class="nav-icon">
+    </a>
+    <a href="neptune.html">
+      <img src="images/neptune.png" alt="Neptune" class="nav-icon">
+    </a>
+    <a href="saturn.html">
+      <img src="images/saturn.png"  alt="Saturn"  class="nav-icon2">
+    </a>
+    <a href="gameindex.html">
+      <img src="images/planet.png" class="nav-icon" alt="game">
+    </a>
+  </nav>
+
+  <header><h1>Venus</h1></header>
+
+  <div class="container">
+    <aside class="moons">
+      <h2>Moons</h2>
+      <ul>
+        <li>— No natural moons —</li>
+      </ul>
+    </aside>
+
+    <div class="image">
+      <img src="images/venus.png" alt="Venus">
+    </div>
+
+    <aside class="moons-right">
+      <h2>Did You Know?</h2>
+      <ul>
+        <li>Scientists believe Venus may once have had temperate oceans and habitable conditions before its runaway greenhouse effect.</li>
+    </ul>
+    </aside>
+
+    <div class="distance-bar">
+      <div><strong>Earth</strong><br>25 million mi (closest)</div>
+      <div><strong>Mars</strong><br>48 million mi</div>
+      <div><strong>Mercury</strong><br>77 million mi</div>
+    </div>
+
+    <button id="infoBtn">More Info</button>
+    <div class="info">
+      <p>Venus is a terrestrial planet with a silicate rock crust, iron core, and a dense CO₂ atmosphere where surface pressures are 92× that of Earth.</p>
+    </div>
+  </div>
+
+  <footer>© Kris Swanson MEDP235 Final</footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(function() {
+      $('#infoBtn').on('click', function() {
+        $('.info').slideToggle();
+      });
+    });
+  </script>
+  <div id="teleport-overlay"></div>
+</body>
+</html>

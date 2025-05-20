@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Which Planet Are You?</title>
+  <link rel="stylesheet" href="gamestyle.css" />
+</head>
+<body>
+    <audio id="bgAudio" src="sounds/space.mp3" loop muted></audio>
+    <nav class="planet-nav">
+        <a href="index.html"><img src="images/earth.png" alt="Earth" class="nav-icon" /></a>
+        <a href="venus.html"><img src="images/venus.png" alt="Venus" class="nav-icon" /></a>
+        <a href="saturn.html"><img src="images/saturn.png" alt="Saturn" class="nav-icon2" /></a>
+        <a href="neptune.html"><img src="images/neptune.png" alt="Neptune" class="nav-icon" /></a>
+      </nav>         
+  <div class="container">
+    <h1 id="title">Which Planet Are You?</h1>
+    <div id="quiz"></div>
+    <button id="nextBtn">Start</button>
+    <div id="result" class="hidden">
+      <h2>You are...</h2>
+      <h1 id="planetName"></h1>
+      <img id="planetImage" src="" alt="Planet Image" />
+      <p id="planetDesc" class="fade-in"></p>
+    <button id="retakeBtn">Retake Quiz</button>
+    </div>
+  </div>
+  <footer style="position:absolute; bottom:10px; width:100%; text-align:center; color:#fff; font-family:'Cherry Bomb One', sans-serif; font-size:0.9rem;">
+    © Kris Swanson MEDP235 Final
+    </footer>
+  <script src="script.js"></script>
+</body>
+</html>
